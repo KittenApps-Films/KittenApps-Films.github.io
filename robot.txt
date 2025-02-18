@@ -6,3 +6,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kittenapps-films.github.io/sitemap.xml
+Sitemap: https://kittenapps-films.github.io/sitemap.html
