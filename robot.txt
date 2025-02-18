@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /index.css
+Disallow: /index.js
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kittenapps-films.github.io/sitemap.xml
