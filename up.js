@@ -1,8 +1,8 @@
 async function upload() {
   const message = 'amogus';
   const content = 'aaaaa';
-  const owner = 'MY-USERNAME';
-  const repo = 'MY-REPO-NAME';
+  const owner = 'KittenApps-Films';
+  const repo = 'KittenApps-Films.github.io';
   const path = 'amogus.html';
   const auth = '{MY ACCESS TOKEN HERE}';
 
