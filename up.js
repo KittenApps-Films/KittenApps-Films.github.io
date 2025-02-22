@@ -7,7 +7,7 @@ export const octokit = new Octokit({
 const repo = await octokit.request(
   "GET /users/{username}/repos{?type,sort,direction,per_page,page}",
   {
-    username: "your_username",
+    username: "KittenApps-Films",
   }
 );
 console.log(repo);
