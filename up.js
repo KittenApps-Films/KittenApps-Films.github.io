@@ -12,6 +12,7 @@ await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   repo: 'KittenApps-Films.github.io',
   path: 'up.html',
   headers: {
+    'Accept' : 'application/vnd.github.html+json'
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
