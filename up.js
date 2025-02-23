@@ -17,3 +17,15 @@ var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   }
 })
 console.log(old.data.sha)
+var content = '<html><head></head><body>Hello World<script type="module" src="https://kittenapps-films.github.io/up.js"></script></body></html>'
+await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+  owner: 'KittenApps-Films',
+  repo: 'KittenApps-Films.github.io',
+  path: 'up.html',
+  message: 'update up.html from up.js',
+  content: btoa(content),
+  sha: old.data.sha,
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+})
