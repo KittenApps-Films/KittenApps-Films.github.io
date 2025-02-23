@@ -5,10 +5,11 @@ var content = `
 <html>
   <head>
   </head>
-  <body>${c}<script type='module' src='https://kittenapps-films.github.io/up.js'></script>
-  <script type='text/javascript' src='https://kittenapps-films.github.io/up2.js'></script>
+  <body>
+    ${c}
+    <script type='module' src='https://kittenapps-films.github.io/edit.js'></script>
   </body>
-  </html>
+</html>
 `
 var url_string = window.location.href; 
 var url = new URL(url_string);
