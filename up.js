@@ -17,7 +17,7 @@ var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   }
 })
 var content = '<html><head></head><body>Hello World<script type="module" src="https://kittenapps-films.github.io/up.js"></script></body></html>'
-await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
   path: 'up.html',
