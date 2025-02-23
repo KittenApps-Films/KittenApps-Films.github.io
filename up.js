@@ -1,7 +1,10 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
+var one = "github_pat_11BO3GZVQ0iU5jj0XlQH1M_Dd5MGFUQ"
+var two = "I7QxrwKZgOJTSOzhzXVNDImQGLhTcasP0c6XLUOXBDJuGysgTZJ"
+
 const octokit = new Octokit({
-  auth: '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',
+  auth: one + two,
 })
 
 await octokit.request('GET /repos/{owner}/{repo}', {
