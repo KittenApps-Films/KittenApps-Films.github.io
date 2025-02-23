@@ -16,6 +16,7 @@ var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
+console.log("yyyy")
 console.log(old.data.sha)
 var content = '<html><head></head><body>Hello World<script type="module" src="https://kittenapps-films.github.io/up.js"></script></body></html>'
 await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
