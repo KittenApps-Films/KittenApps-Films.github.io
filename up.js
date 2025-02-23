@@ -10,6 +10,11 @@ var content = `
   </body>
   </html>
 `
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var d = url.searchParams.get("d");
+
+if (isValidFilename(d)) {
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
@@ -20,7 +25,8 @@ const octokit = new Octokit({
   auth: one + two,
 })
 
-var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+try { 
+  var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
   path: 'up.html',
@@ -40,3 +46,6 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
+} catch {
+}
+}
