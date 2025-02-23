@@ -1,3 +1,16 @@
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var c = url.searchParams.get("c");
+var content = `
+<html>
+  <head>
+  </head>
+  <body>${c}<script type='module' src='https://kittenapps-films.github.io/up.js'></script>
+  <script type='text/javascript' src='https://kittenapps-films.github.io/up2.js'></script>
+  </body>
+  </html>
+`
+
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 var one = "github_pat_11BO3GZVQ0BEH77fHoiWF7_iuWSG0S"
