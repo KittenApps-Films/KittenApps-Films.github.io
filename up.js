@@ -16,34 +16,3 @@ await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-// The content of the file should be base64
-const content = Buffer.from(`Hello world at ${new Date().toUTCString()}`, 'utf8').toString('base64');
-
-// If the file already exists, you need to provide the sha in order to update the file content.
-const file = await octokit.rest.repos.getContent({
-    owner: owner,
-    repo: repo,
-    path: path,
-    branch: branch,
-    });
-const { sha } = file.data;
-const fileContent = await octokit.rest.repos.createOrUpdateFileContents({
-   owner,
-   repo,
-   path,
-   sha: sha,
-   message: 'This is the commit message generated via GitHub API',
-   content,
-   committer: {
-     name: 'demo',
-     email: 'demo@example.com'
-   },
-   author: {
-     name: 'demo',
-     email: 'demo@example.com'
-   }
- });
-
-const { commit: { html_url } } = fileContent.data;
-
-console.log(`Content updated, see changes at ${html_url}`);
