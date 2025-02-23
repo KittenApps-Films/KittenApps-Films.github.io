@@ -43,9 +43,7 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
   path: d,
   message: 'update up.html from up.js',
   content: btoa(content),
-  if (s == true) {
   sha: old.data.sha,
-  }
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
