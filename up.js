@@ -6,17 +6,16 @@ var two = "0ubQtn31vuMDAyfXu1LtRM3EgHhVXqXTc2p5YYM7IJP6bBLd7eoR"
 const octokit = new Octokit({
   auth: one + two,
 })
-//export async function update() {
+
 var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
   path: 'up.html',
   headers: {
-    //'Accept' : 'application/vnd.github.html+json',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-var content = '<html><head></head><body>Hello World<script type="module" src="https://kittenapps-films.github.io/up.js"></script></body></html>'
+
 var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
@@ -28,5 +27,3 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-//}
-console.log(ab)
