@@ -14,9 +14,6 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var d = url.searchParams.get("d");
 
-if (isValidFilename(d)) {
-  console.log("worked")
-
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 var one = "github_pat_11BO3GZVQ0BEH77fHoiWF7_iuWSG0S"
@@ -48,5 +45,4 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
   }
 })
 } catch {
-}
 }
