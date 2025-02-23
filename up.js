@@ -7,12 +7,13 @@ const octokit = new Octokit({
   auth: one + two,
 })
 
-await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
   path: 'up.html',
   headers: {
-    'Accept' : 'application/vnd.github.html+json',
+    //'Accept' : 'application/vnd.github.html+json',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
+console.log(old)
