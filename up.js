@@ -15,6 +15,7 @@ var url = new URL(url_string);
 var d = url.searchParams.get("d");
 
 if (isValidFilename(d)) {
+  console.log("worked")
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
