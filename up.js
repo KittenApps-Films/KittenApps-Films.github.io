@@ -6,7 +6,7 @@ var two = "0ubQtn31vuMDAyfXu1LtRM3EgHhVXqXTc2p5YYM7IJP6bBLd7eoR"
 const octokit = new Octokit({
   auth: one + two,
 })
-func update() {
+function update() {
 var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
