@@ -9,7 +9,7 @@ const octokit = new Octokit({
 
 await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
-  repo: 'kittenfilms.github.io',
+  repo: 'KittenApps-Films.github.io',
   //path: 'PATH',
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
