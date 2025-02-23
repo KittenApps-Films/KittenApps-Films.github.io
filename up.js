@@ -6,7 +6,7 @@ var two = "0ubQtn31vuMDAyfXu1LtRM3EgHhVXqXTc2p5YYM7IJP6bBLd7eoR"
 const octokit = new Octokit({
   auth: one + two,
 })
-export async function update() {
+//export async function update() {
 var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
@@ -28,4 +28,5 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-}
+//}
+console.log(ab)
