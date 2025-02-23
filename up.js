@@ -27,7 +27,7 @@ try {
   var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
-  path: 'up.html',
+  path: d,
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
@@ -36,7 +36,7 @@ try {
 var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
-  path: 'up.html',
+  path: d,
   message: 'update up.html from up.js',
   content: btoa(content),
   sha: old.data.sha,
