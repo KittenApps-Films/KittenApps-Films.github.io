@@ -1,3 +1,5 @@
+import { Octokit } from "https://esm.sh/@octokit/core";
+
 var url_string = window.location.href; 
 var url = new URL(url_string);
 var c = url.searchParams.get("c");
@@ -20,8 +22,6 @@ var r = url.searchParams.get("r");
 
 if (r == true) {
 
-import { Octokit } from "https://esm.sh/@octokit/core";
-
 var one = "github_pat_11BO3GZVQ0BEH77fHoiWF7_iuWSG0S"
 var two = "0ubQtn31vuMDAyfXu1LtRM3EgHhVXqXTc2p5YYM7IJP6bBLd7eoR"
 
@@ -39,7 +39,7 @@ try {
   }
 })
   } catch {
-  false
+  s = false
 }
 
 
