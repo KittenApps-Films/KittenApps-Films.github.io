@@ -7,14 +7,10 @@ const octokit = new Octokit({
   auth: one + two,
 })
 
-await octokit.request('POST /repos/{owner}/{repo}/dispatches', {
+await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenFilms',
-  repo: 'REPO',
-  event_type: 'on-demand-test',
-  client_payload: {
-    unit: false,
-    integration: true
-  },
+  repo: 'kittenfilms.github.io',
+  //path: 'PATH',
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
