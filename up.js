@@ -7,7 +7,7 @@ const octokit = new Octokit({
   auth: one + two,
 })
 
-repo = await octokit.request('GET /repos/{owner}/{repo}', {
+var repo = await octokit.request('GET /repos/{owner}/{repo}', {
   owner: 'KittenApps-Films',
   repo: 'KittenApps-Films.github.io',
   headers: {
