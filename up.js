@@ -16,4 +16,4 @@ var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-console.log(old)
+console.log(old.data)
