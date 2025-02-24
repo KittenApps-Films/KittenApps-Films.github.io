@@ -1,2 +1,3 @@
-var content = prompt("Hey type something here: ");
-window.location.replace("https://kittenapps-films.github.io/up.html?c=" + content);
+var path = prompt("Path:");
+var content = prompt("Content:");
+window.location.replace("https://kittenapps-films.github.io/edit/edit.html?c="+content+"&d="+path);
