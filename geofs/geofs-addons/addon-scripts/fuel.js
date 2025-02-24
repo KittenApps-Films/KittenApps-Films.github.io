@@ -1,4 +1,5 @@
 'use strict';
+alert("There is a newer version of this addon, go to Github to get it");
 console.log("Geofs fuel running");
 let fuelvariable = 100;
 let engine = true;
