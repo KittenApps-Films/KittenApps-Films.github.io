@@ -19,7 +19,7 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var r = url.searchParams.get("r");
 
-import { full } from 'code.js'
+import { full } from '/code.js'
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
