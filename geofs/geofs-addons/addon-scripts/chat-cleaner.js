@@ -1,4 +1,5 @@
 'use strict'
+alert("There is a newer version of this addon, go to Github to get it");
 setTimeout(function(){
     console.log("Chat running");
     setInterval(clean, 100);
