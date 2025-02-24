@@ -19,19 +19,18 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var r = url.searchParams.get("r");
 
-var one = "github_pat_11BO3GZVQ0BEH77fHoiWF7_iuWSG0S"
-var two = "0ubQtn31vuMDAyfXu1LtRM3EgHhVXqXTc2p5YYM7IJP6bBLd7eoR"
+import { full } from './code.js'
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 const octokit = new Octokit({
-  auth: one + two,
+  auth: full,
 })
 
 var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
-  repo: 'KittenApps-Films.github.io',
-  path: 'wiki/'+d,
+  repo: 'GeoFS_Wiki',
+  path: d,
   message: 'making '+d+' from make.js',
   content: btoa(content),
   headers: {
