@@ -29,7 +29,7 @@ const octokit = new Octokit({
 
 var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
-  repo: 'KittenApps-Films.github.io',
+  repo: 'GeoFS_Wiki',
   path: d,
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
@@ -38,7 +38,7 @@ var old = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
 
 var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
-  repo: 'KittenApps-Films.github.io',
+  repo: 'GeoFS_Wiki',
   path: d,
   message: 'update up.html from up.js',
   content: btoa(content),
