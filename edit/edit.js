@@ -47,3 +47,4 @@ var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}',
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
+window.location.replace("https://kittenapps-films.github.io/edit/saving.html");
