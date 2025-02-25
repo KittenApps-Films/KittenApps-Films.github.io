@@ -2,7 +2,9 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var d = url.searchParams.get("d");
 
-setInterval(checkURL('https://kittenapps-films.github.io/GeoFS_Wiki/'+d), 500);
+var url = "https://kittenapps-films.github.io/GeoFS_Wiki/"+d
+
+setInterval(checkURL(url), 500);
 
 async function checkURL(url) {
   try {
