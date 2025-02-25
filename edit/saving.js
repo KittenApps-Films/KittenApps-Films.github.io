@@ -4,9 +4,9 @@ var d = url.searchParams.get("d");
 
 var url = "https://kittenapps-films.github.io/GeoFS_Wiki/"+d;
 
-setInterval(checkURL(url), 500);
+setInterval(checkURL(), 500);
 
-async function checkURL(url) {
+async function checkURL() {
   try {
     const response = await fetch(url);
     if (!response.ok) return console.log(`URL ${url} has not been made`);  
