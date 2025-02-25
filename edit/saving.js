@@ -4,7 +4,7 @@ var d = url.searchParams.get("d");
 
 var url = "https://kittenapps-films.github.io/GeoFS_Wiki/"+d;
 
-setInterval(checkURL(), 500);
+setInterval(checkURL, 500);
 
 async function checkURL() {
   try {
