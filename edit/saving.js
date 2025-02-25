@@ -7,8 +7,9 @@ setInterval(checkURL('https://kittenapps-films.github.io/GeoFS_Wiki/'+d), 500);
 async function checkURL(url) {
   try {
     const response = await fetch(url);
-    //go again
-  } catch (error) {
+    if (!response.ok) return console.log(`URL ${url} has not been made`);  
     window.location.replace('https://kittenapps-films.github.io/GeoFS_Wiki/'+d);
+  } catch (error) {
+    console.log(`Error checking URL: ${error}`);
   }
 }
