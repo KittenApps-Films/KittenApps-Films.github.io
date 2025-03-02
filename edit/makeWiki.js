@@ -26,7 +26,7 @@ console.log(b)
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
-if (works) {
+if (works()) {
 console.log("ran")
 var home = `
 <html>
