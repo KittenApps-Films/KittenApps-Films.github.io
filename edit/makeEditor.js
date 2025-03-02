@@ -14,3 +14,9 @@ var config = {
 };
 
 observer.observe(target, config);
+
+function myFunction() {
+console.log("change")
+  document.getElementById("preview").innerHTML = document.querySelector("#content").value
+}
+document.querySelector("#content").onchange = function() {myFunction()};
