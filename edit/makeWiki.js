@@ -10,24 +10,16 @@ var type = url.searchParams.get("t");
 function works() {
   if (type === "users" || type === "airlines" || type === "air_forces" && ad.length > 0) {
     return true
-    console.log("true")
   } else {
     return false
-    console.log("false")
   }
 }
 
-import { full } from './code.js'
-
-import { fuller } from './code.js'
-
-var b = fuller()
-console.log(b)
+import { get } from './code.js'
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 if (works()) {
-console.log("ran")
 var home = `
 <html>
   <head>
@@ -59,7 +51,7 @@ export var dictionary = {
 `
 
 const octokit = new Octokit({
-  auth: full,
+  auth: get(),
 })
 
 var home = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
@@ -95,5 +87,4 @@ var data = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
 window.location.replace("https://kittenapps-films.github.io/edit/saving.html?d="+type+"/"+name+"/index.html");
 } else {
   alert("An error ocured")
-  console.log("ran not")
 }
