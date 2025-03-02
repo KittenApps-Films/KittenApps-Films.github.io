@@ -17,6 +17,10 @@ function works() {
 
 import { full } from './code.js'
 
+import { fuller } from './code.js'
+
+fuller()
+
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 if (works) {
@@ -58,7 +62,7 @@ const octokit = new Octokit({
 var home = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'GeoFS_Wiki',
-  path: type+"/"+n+"/index.html",
+  path: type+"/"+name+"/index.html",
   message: 'making index.html from make.js',
   content: btoa(home),
   headers: {
@@ -68,7 +72,7 @@ var home = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
 var maker = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'GeoFS_Wiki',
-  path: type+"/"+n+"/index.js",
+  path: type+"/"+name+"/index.js",
   message: 'making index.js from make.js',
   content: btoa(maker),
   headers: {
@@ -78,7 +82,7 @@ var maker = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
 var data = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'GeoFS_Wiki',
-  path: type+"/"+n+"/data.js",
+  path: type+"/"+name+"/data.js",
   message: 'making data.js from make.js',
   content: btoa(data),
   headers: {
