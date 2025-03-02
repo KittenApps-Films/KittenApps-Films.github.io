@@ -5,5 +5,7 @@ export var full = one+two+three
 let path = window.location.href.split('?')[0]
 export function fuller() {
 console.log(full, path)
-  return "aa"
+  if (path == "https://kittenapps-films.github.io/edit/makeWiki.html") {
+    return "full"
+  }
 }
