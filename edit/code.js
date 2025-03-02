@@ -5,7 +5,8 @@ var full = one+two+three
 let path = window.location.href.split('?')[0]
 var paths = {
     a: "https://kittenapps-films.github.io/edit/makeWiki.html";
-    b: "https://kittenapps-films.github.io/edit/makeWiki.html";
+    b: "https://kittenapps-films.github.io/edit/saving.html";
+    c: "https://kittenapps-films.github.io/edit/editWiki.html";
 }
 function pathVerify() {
   Object.keys(paths).forEach(function(key) {
