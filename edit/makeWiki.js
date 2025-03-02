@@ -1,18 +1,34 @@
+//name of wiki
 var url_string = window.location.href; 
 var url = new URL(url_string);
 var name = url.searchParams.get("n");
-var html = `
+//type of wiki, users, airlines or air_forces
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var type = url.searchParams.get("t");
+
+function works() {
+  if (type === "users" || type === "airlines" || type === "air_forces" && ad.length > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+if (works) {
+
+var home = `
 <html>
   <head>
   </head>
   <body>
     <div id="content"></div>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
 `
-var javascript = `
-var content = "Home page of ${n}"
+var maker = `
+import { dictionary } from './data.js'
 
 var url_string = window.location.href; 
 var url = new URL(url_string);
@@ -20,15 +36,16 @@ var file = url.searchParams.get("f");
 var doc = document.getElementById("content");
 
 if (file == "one") {
-  doc.innerHTML = one
+  doc.innerHTML = dictionary.one
 } else {
-  doc.innerHTML = content
+  doc.innerHTML = dictionary.home
 }
 `
-
-var url_string = window.location.href; 
-var url = new URL(url_string);
-var type = url.searchParams.get("t");
+var data = `
+export var dictionary = { 
+     home:"Home page of ${n}",
+};
+`
 
 import { full } from './code.js'
 
@@ -38,24 +55,37 @@ const octokit = new Octokit({
   auth: full,
 })
 
-var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+var home = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'GeoFS_Wiki',
   path: type+"/"+n+"/index.html",
   message: 'making index.html from make.js',
-  content: btoa(content),
+  content: btoa(home),
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-var newFile = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+var maker = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
   owner: 'KittenApps-Films',
   repo: 'GeoFS_Wiki',
   path: type+"/"+n+"/index.js",
   message: 'making index.js from make.js',
-  content: btoa(content),
+  content: btoa(maker),
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+})
+var data = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+  owner: 'KittenApps-Films',
+  repo: 'GeoFS_Wiki',
+  path: type+"/"+n+"/data.js",
+  message: 'making data.js from make.js',
+  content: btoa(data),
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
 window.location.replace("https://kittenapps-films.github.io/edit/saving.html?d="+type+"/"+n+"/index.html");
+} else {
+  alert("An error ocured")
+}
