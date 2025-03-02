@@ -3,7 +3,7 @@ var div = document.getElementById("preview")
 
 var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
-      div.innerHTML = target.innerHTML
+      div.innerHTML = target.value
       });
 });
 
