@@ -47,7 +47,7 @@ if (file == "one") {
 `
 var data = `
 export var dictionary = { 
-     home:"Home page of ${n}",
+     home:"Home page of ${name}",
 };
 `
 
