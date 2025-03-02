@@ -21,7 +21,8 @@ import { full } from './code.js'
 
 import { fuller } from './code.js'
 
-fuller()
+var b = fuller()
+console.log(b)
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
