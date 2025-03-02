@@ -15,6 +15,10 @@ function works() {
   }
 }
 
+import { full } from './code.js'
+
+import { Octokit } from "https://esm.sh/@octokit/core";
+
 if (works) {
 
 var home = `
@@ -46,10 +50,6 @@ export var dictionary = {
      home:"Home page of ${n}",
 };
 `
-
-import { full } from './code.js'
-
-import { Octokit } from "https://esm.sh/@octokit/core";
 
 const octokit = new Octokit({
   auth: full,
