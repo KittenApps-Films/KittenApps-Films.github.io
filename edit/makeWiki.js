@@ -89,7 +89,7 @@ var data = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
-window.location.replace("https://kittenapps-films.github.io/edit/saving.html?d="+type+"/"+n+"/index.html");
+window.location.replace("https://kittenapps-films.github.io/edit/saving.html?d="+type+"/"+name+"/index.html");
 } else {
   alert("An error ocured")
 }
