@@ -1,10 +1,10 @@
 var target = document.querySelector("#content");
 var div = document.getElementById("preview")
-div.innerHTML = target.value
+div.innerHTML = target.value.replace("</script>", "script tag close, (script dat may not be used)");
 
 var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
-      div.innerHTML = target.value
+      div.innerHTML = target.value.replace("</script>", "script tag close, (script dat may not be used)");
       });
 });
 
