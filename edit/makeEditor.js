@@ -1,5 +1,6 @@
 var target = document.querySelector("#content");
 var div = document.getElementById("preview")
+div.innerHTML = target.value
 
 var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
