@@ -1,4 +1,5 @@
 var target = document.querySelector("#content");
+var name = document.getElementById("name")
 var div = document.getElementById("preview")
 div.innerHTML = target.value.replace("</script>", "script tag close, (script dat may not be used)");
 
@@ -22,5 +23,5 @@ console.log("change")
 }
 document.querySelector("#content").onchange = function() {myFunction()};
 function save() {
-      
+      window.location.replace(`https://kittenapps-films.github.io/edit/makeWiki.html?t=${type}&n=${name}&c=${target.value}`);
 }
