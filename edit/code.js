@@ -16,12 +16,9 @@ function pathVerify() {
 })
 }
 export function get() {
-  if (pathVerify()) {
+  //if (pathVerify()) {
     return full
-  } else {
+  /*} else {
     return "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"
-  }
-}
-if (two[three]) {
-  console.log("true")
+  }*/
 }
